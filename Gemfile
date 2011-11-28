@@ -5,7 +5,7 @@ gem 'rails', '3.1.1'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+
 gem 'gravatar_image_tag', '1.0.0.pre2'
 
 # Gems used only for assets and not required
@@ -17,6 +17,7 @@ group :assets do
 end
 
 group :development do
+  gem 'sqlite3-ruby', :require => 'sqlite3'
   gem 'rspec-rails', '2.6.1'
   gem 'annotate', '2.4.0'
 end
@@ -31,6 +32,8 @@ end
 group :production do
   # gems specifically for Heroku go here
   gem 'pg'
+  gem 'thin'
+  gem 'heroku'
 end
 
 gem 'jquery-rails'
