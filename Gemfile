@@ -28,6 +28,11 @@ group :test do
   gem 'factory_girl_rails', '1.0'
 end
 
+group :production do
+  # gems specifically for Heroku go here
+  gem 'pg'
+end
+
 gem 'jquery-rails'
 
 # To use ActiveModel has_secure_password
